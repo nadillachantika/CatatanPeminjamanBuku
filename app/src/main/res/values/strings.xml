@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Catatan Pinjam Buku</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="statusList">
+        <item>Belum Dikembalikan</item>
+        <item>Sudah Dikembalikan</item>
+    </string-array>
+</resources>

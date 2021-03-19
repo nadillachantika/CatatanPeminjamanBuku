@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/berandaFragment">
+
+
+    <fragment
+        android:id="@+id/berandaFragment"
+        android:name="com.nadillla.catatanpinjambuku.Home.BerandaFragment"
+        android:label="fragment_beranda"
+        tools:layout="@layout/fragment_beranda" >
+        <action
+            android:id="@+id/action_berandaFragment_to_catatanFragment2"
+            app:destination="@id/catatanFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/catatanFragment"
+        android:name="com.nadillla.catatanpinjambuku.Home.CatatanFragment"
+        android:label="fragment_catatan"
+        tools:layout="@layout/fragment_catatan" />
+</navigation>
