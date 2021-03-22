@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.nadillla.catatanpinjambuku.Local.CatatanDatabase
 import com.nadillla.catatanpinjambuku.R
@@ -39,12 +40,17 @@ class BerandaFragment : Fragment() {
         super.onCreate(savedInstanceState)
         catatanDB = context?.let { CatatanDatabase.getInstance(it) }
         userViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
+//        calendarView.setOnDateChangeListener { calendarView, i, i2, i3 ->
+//          //  Toast.makeText(context, "", Toast.LENGTH_SHORT).show()
+//        }
 
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         showJmlPeminjaman()
+    //    showBukuKembali()
+     //   showBukuBesok()
     }
 
     private fun showJmlPeminjaman() {
@@ -52,12 +58,37 @@ class BerandaFragment : Fragment() {
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
-                tvJml.setText("$it")
+                tvJml.setText("$it Buku")
                 Log.d(TAG, "showJmlPeminjaman: $it")},
                 {
                 Log.d(TAG, "showJmlPeminjaman: gagal, ${it.message}")
             })
     }
+
+//    private fun showBukuBesok() {
+//        Observable.fromCallable { catatanDB?.catatanDao()?.getTomorrow() }
+//            .subscribeOn(Schedulers.io())
+//            .observeOn(AndroidSchedulers.mainThread())
+//            .subscribe({
+//                tvAkanKembali.setText("$it Buku")
+//                Log.d(TAG, "showJmlPengembalian buku besok: $it")},
+//                {
+//                    Log.d(TAG, "showJmlPeminjaman: gagal, ${it.message}")
+//                })
+//    }
+//    private fun showBukuKembali() {
+//        Observable.fromCallable { catatanDB?.catatanDao()?.getTotalKembali() }
+//            .subscribeOn(Schedulers.io())
+//            .observeOn(AndroidSchedulers.mainThread())
+//            .subscribe({
+//                tvJmlKembali.setText("$it")
+//                Log.d(TAG, "showJmlKembali: $it")},
+//                {
+//                    Log.d(TAG, "showJmlPeminjaman: gagal, ${it.message}")
+//                })
+//    }
+
+
 
 
 }

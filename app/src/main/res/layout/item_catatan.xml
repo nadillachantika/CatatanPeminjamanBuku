@@ -6,30 +6,30 @@
     android:layout_height="wrap_content"
     android:background="#FFFFFF">
 
-    <ImageView
-        android:id="@+id/imgBuku"
-        android:layout_width="114dp"
-        android:layout_height="136dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/addpict" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imgBuku"-->
+<!--        android:layout_width="114dp"-->
+<!--        android:layout_height="136dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:srcCompat="@drawable/addpict" />-->
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
+        android:layout_marginStart="15dp"
         android:fontFamily="@font/poppins_medium"
         android:text="Nama"
         android:textColor="#000000"
         android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/imgBuku"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/edNama"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="234dp"
+        android:layout_height="27dp"
         android:layout_marginStart="14dp"
         android:fontFamily="@font/poppins_medium"
         android:text="Nadilla"
@@ -42,45 +42,45 @@
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppins_medium"
         android:text="Jdl Buku"
         android:textColor="#000000"
         android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/imgBuku"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppins_medium"
+        android:text="Tgl Kembali"
         android:textColor="#000000"
         android:textSize="14sp"
-        android:text="Tgl Kembali"
-        app:layout_constraintStart_toEndOf="@+id/imgBuku"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="8dp"
-        android:text="Status"
-        android:layout_marginStart="14dp"
         android:fontFamily="@font/poppins_medium"
+        android:text="Status"
         android:textColor="#000000"
         android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/imgBuku"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <TextView
         android:id="@+id/edJudul"
-        android:layout_width="56dp"
-        android:layout_height="21dp"
+        android:layout_width="233dp"
+        android:layout_height="23dp"
         android:layout_marginStart="14dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppins_medium"
@@ -119,8 +119,8 @@
     <View
         android:id="@+id/view"
         android:layout_width="wrap_content"
-        android:layout_height="0.3dp"
-        android:background="#FFB74D"
+        android:layout_height="0.5dp"
+        android:background="#F86743"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgBuku"
@@ -130,6 +130,7 @@
         android:id="@+id/btnEdit"
         android:layout_width="31dp"
         android:layout_height="35dp"
+        android:layout_marginEnd="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_edit_24" />
@@ -139,6 +140,7 @@
         android:layout_width="31dp"
         android:layout_height="35dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnEdit"
         app:srcCompat="@drawable/ic_baseline_delete_24" />

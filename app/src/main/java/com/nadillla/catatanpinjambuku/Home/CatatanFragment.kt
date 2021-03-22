@@ -68,24 +68,30 @@ class CatatanFragment : Fragment() {
         view.edTglKembali.setText(getDate())
         view.btnSimpan.setOnClickListener {
 
-//            if (view.edNama.text.toString().isEmpty() || view.edJudul.text.toString().isEmpty() && view.edPenulis.text.toString()
-//                    .isEmpty() && view.edIsbn.text.isEmpty()
-//            ) {
-//                Toast.makeText(context, "Nama, Judul Buku, Nama Penulis, dan ISBN tidak boleh kosong", Toast.LENGTH_SHORT).show()
-//            } else {
+            if (view.edNama.text.toString().isEmpty() || view.edJudul.text.toString()
+                    .isEmpty() && view.edPenulis.text.toString()
+                    .isEmpty() && view.edIsbn.text.isEmpty()
+            ) {
+                Toast.makeText(
+                    context,
+                    "Nama, Judul Buku, Nama Penulis, dan ISBN tidak boleh kosong",
+                    Toast.LENGTH_SHORT
+                ).show()
+            } else {
 
-            catatanViewModel.addCatatan(
-                null,
-                view.edtglPinjam.text.toString(),
-                view.edTglKembali.text.toString(),
-                view.edNama.text.toString(),
-                view.edHp.text.toString(),
-                view.edIsbn.text.toString()
-                ,
-                view.edJudul.text.toString(),
-                view.edPenulis.text.toString(),
-                view.edStatus.selectedItem.toString()
-            )
+                catatanViewModel.addCatatan(
+                    null,
+                    view.edtglPinjam.text.toString(),
+                    view.edTglKembali.text.toString(),
+                    view.edNama.text.toString(),
+                    view.edHp.text.toString(),
+                    view.edIsbn.text.toString()
+                    ,
+                    view.edJudul.text.toString(),
+                    view.edPenulis.text.toString(),
+                    view.edStatus.selectedItem.toString()
+                )
+            }
         }
 
 
